@@ -10,9 +10,10 @@ pool:
   name: Azure pipelines self-hosted pool
   demands:
    - agent.name -equals Self-hosted agent
-   
 strategy:
   matrix:
+    Python39:
+      python.version: '3.9'
     Python310:
       python.version: '3.10'
 
