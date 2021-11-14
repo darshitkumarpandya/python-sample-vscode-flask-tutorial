@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 trigger:
-- master
+- test_trigger
 
 pool:
   name: Azure pipelines self-hosted pool
@@ -13,9 +13,9 @@ pool:
 strategy:
   matrix:
     Python37:
-      python.version: '3.7'
+      python.version: '3.7.9'
     Python38:
-      python.version: '3.8'
+      python.version: '3.8.5'
 
 steps:
 - task: UsePythonVersion@0
